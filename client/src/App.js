@@ -47,9 +47,9 @@ class App extends React.Component {
   // 모든 컴포넌트가 mount된 이후에
   componentDidMount() {
     this.timer = setInterval(this.progress, 100)
-    // this.callApi()
-    //   .then(res => this.setState({customers: res}))
-    //   .catch(err => console.log(err));
+    this.callApi()
+      .then(res => this.setState({customers: res}))
+      .catch(err => console.log(err));
   }
 
   callApi = async () => {
