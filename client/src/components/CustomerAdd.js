@@ -27,7 +27,7 @@ class CustomerAdd extends React.Component {
             gender: '',
             job: '',
             fileName: ''
-        })
+        }) 
     }
 
     handleFileChange = (e) => {

@@ -95,6 +95,7 @@ class App extends React.Component {
                 <TableCell>생년월일</TableCell>
                 <TableCell>성별</TableCell>
                 <TableCell>직업</TableCell>
+                <TableCell>설정</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -107,6 +108,7 @@ class App extends React.Component {
                   birthday={c.birthday}
                   gender={c.gender}
                   job={c.job}
+                  stateRefresh={this.stateRefresh}
                 /> )}):
                 <TableRow>
                   <TableCell colspan="6" align="center">
