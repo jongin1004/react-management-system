@@ -45,6 +45,17 @@ class App extends React.Component {
     }
   }
 
+  stateRefresh = () => {
+    this.setState({
+      customers: "",
+      completed: 0,
+    });
+
+    this.callApi()
+      .then(res => this.setState({customers: res}))
+      .catch(err => console.log(err));
+  }
+
   // 모든 컴포넌트가 mount된 이후에
   componentDidMount() {
     this.timer = setInterval(this.progress, 100)
@@ -106,7 +117,7 @@ class App extends React.Component {
             </TableBody>
           </Table>
         </Paper>
-        <CustomerAdd />
+        <CustomerAdd stateRefresh={this.stateRefresh} />
       </div>
     );
   }
